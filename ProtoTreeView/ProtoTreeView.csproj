@@ -5,6 +5,18 @@
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
+  
+    <PropertyGroup>
+    <PackageId>ProtoTreeView</PackageId>
+    <Description>
+      This package provides the a simple TreeView for inspecting protobuf messages through reflection.
+    </Description>
+    <Authors>ax-meyer</Authors>
+    <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ax-meyer/ProtoTreeView</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ax-meyer/ProtoTreeView</PackageProjectUrl>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.19.4" />
