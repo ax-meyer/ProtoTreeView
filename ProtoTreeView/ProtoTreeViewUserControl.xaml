@@ -1,0 +1,63 @@
+﻿<!--
+ProtoTreeView: C# WPF library offering a basic nested tree view for protobuf files.
+Copyright (C) 2021 Alexander Meyer for Fraunhofer ILT
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3.0 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+
+<UserControl x:Class="ProtoTreeView.ProtoTreeViewUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProtoTreeView"
+			 xmlns:sd="clr-namespace:ICSharpCode.TreeView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+	<sd:SharpTreeView x:Name="treeView1"
+                              AllowDrop="True"
+                              AllowDropOrder="True"
+							  Root="{Binding}"
+							  ShowAlternation="True"
+							  >
+		<ListView.View>
+			<sd:SharpGridView>
+				<GridView.Columns>
+					<GridViewColumn Header="Object">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<sd:SharpTreeNodeView />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Header="Value">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding FieldValue}" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Header="Type">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding DataType}" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+				</GridView.Columns>
+			</sd:SharpGridView>
+		</ListView.View>
+	</sd:SharpTreeView>
+</UserControl>

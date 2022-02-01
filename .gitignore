@@ -1,0 +1,45 @@
+*.suo
+*.user
+*.lock
+_ReSharper.*
+bin
+obj
+.vs
+.vscode
+*.lvf
+
+# Ignore NuGet Packages
+*.nupkg
+
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Ignore other intermediate files that NuGet might create. project.lock.json is used in conjunction
+# with project.json (NuGet v3); project.assets.json is used in conjunction with the PackageReference
+# format (NuGet v4 and .NET Core).
+project.lock.json
+project.assets.json
+
+/CSClass
+/CppClass
+/PythonClass
+/UnitTesting/UnitTestsMultiFlexJobCreator/Resources/testImages/white_test.png
+/UnitTesting/UnitTestsMultiFlexJobCreator/Resources/testImages/test2.png
+/UnitTesting/UnitTestsMultiFlexJobCreator/Resources/testImages/test.png
+/UnitTesting/UnitTestsMultiFlexJobCreator/Resources/testImages/checkerboard_big.png
+/bitmaskdump.txt
+*.key
+/KylaOPCUA/Properties/Resources.resx
+/KylaOPCUA/Properties/Resources.Designer.cs
+/SharedClasses/Properties/Resources.resx
+/SharedClasses/Properties/Resources.Designer.cs
