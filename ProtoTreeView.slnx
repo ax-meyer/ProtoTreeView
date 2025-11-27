@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ProtoCompileDummy/ProtoCompileDummy.csproj" />
+  <Project Path="ProtoTreeView/ProtoTreeView.csproj" />
+  <Project Path="ProtoTreeViewExample/ProtoTreeViewExample.csproj" />
+</Solution>
