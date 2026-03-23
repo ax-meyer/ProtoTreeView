@@ -35,7 +35,7 @@ jobs:
         dotnet-version: 10.0.x
                         
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v2.0.0
+      uses: microsoft/setup-msbuild@v3.0.0
                   
     - name: Build Windows
       if: contains(matrix.os, 'windows')
@@ -58,7 +58,7 @@ jobs:
         dotnet-version: 10.0.x
         
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v2.0.0
+      uses: microsoft/setup-msbuild@v3.0.0
                   
     - name: Build Windows
       run: dotnet build --configuration Release .\ProtoTreeView\ProtoTreeView.csproj
