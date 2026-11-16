@@ -85,5 +85,5 @@ jobs:
     - name: Nuget Deploy
       run: |
         cd nupkg
-        dotnet nuget push "**/*.nupkg" --api-key ${{ steps.nuget_login.outputs.NUGET_API_KEY }} --source "https://api.nuget.org/v3/index.json" --no-symbols true
+        dotnet nuget push "**/*.nupkg" --api-key ${{ steps.nuget_login.outputs.NUGET_API_KEY }} --source "https://api.nuget.org/v3/index.json" --no-symbols
 
